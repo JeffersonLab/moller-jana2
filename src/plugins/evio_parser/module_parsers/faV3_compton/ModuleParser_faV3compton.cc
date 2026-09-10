@@ -123,9 +123,9 @@ void ModuleParser_faV3compton::parse(std::shared_ptr<evio::BaseStructure> data_b
 	    if( last_data_type == 3) { // trigger time word 2
 	       timestamp2 =  getBitsInRange(d, 23, 0);
 
-               LOG_DEBUG(GetLogger()) << std::dec << "ModuleParser_faV3compton::DEBUG - Word " << nwords << " 0x" << std::hex << d << std::dec<<" - data type 3: Trigger Time 2 = " << timestamp2 << LOG_END;
+         LOG_DEBUG(GetLogger()) << std::dec << "ModuleParser_faV3compton::DEBUG - Word " << nwords << " 0x" << std::hex << d << std::dec<<" - data type 3: Trigger Time 2 = " << timestamp2 << LOG_END;
 
-               faV3comptonHit hit;
+         faV3comptonHit hit;
 
 	       hit.trigger_num = event_number;
 	       hit.timestamp1 = timestamp1;
